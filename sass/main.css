@@ -1,0 +1,143 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: --primary-text-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+:root {
+  --primary-bg-color: #84A178;
+  --primary-text-color: #131313;
+  --secondary-text-color: #FCFCFC;
+  --accent-color: #F8D24E;
+  --timeng-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --font-title: Seymour One, sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.hero-header {
+  padding-top: 12px;
+  width: 100vw;
+  height: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .hero-header {
+    height: 416px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-header {
+    height: 664px;
+  }
+}
+
+.hero-header__wrap {
+  display: flex;
+  gap: 310px;
+}
+
+.logo {
+  display: block;
+  width: 48px;
+  height: 44px;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    width: 60px;
+    height: 65px;
+  }
+}
+
+.navigation__list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 50px;
+  }
+}
+
+.navigation__link {
+  position: relative;
+  color: var(--secondary-text-color);
+  transition: color 250ms var(--timeng-function);
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: var(--accent-color);
+}
+
+.current {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .current {
+    display: block;
+    color: var(--accent-color);
+  }
+}/*# sourceMappingURL=main.css.map */

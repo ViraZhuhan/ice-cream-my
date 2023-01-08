@@ -1,0 +1,60 @@
+.hero-header {
+   padding-top: 12px;
+    width: 100vw;
+    height: 100vw;
+
+    @include tablet {
+        height: 416px;
+    }
+
+    @include desktop {
+        height: 664px;
+    }
+}
+
+.hero-header__wrap {
+    display: flex;
+    gap: 310px;
+}
+
+.logo {
+    display: block;
+    width: 48px;
+    height: 44px;
+
+    @include desktop {
+        width: 60px;
+        height: 65px;
+    }
+}
+
+.navigation__list {
+    display: none;
+    @include tablet {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 50px;
+    }
+}
+
+.navigation__link {
+    position: relative;
+    color: var(--secondary-text-color);
+    
+    transition: color 250ms var(--timeng-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.current {
+    display: none;
+
+    @include tablet {
+        display: block;
+        color: var(--accent-color);
+    }
+}
