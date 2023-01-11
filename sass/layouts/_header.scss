@@ -1,5 +1,5 @@
 .hero-header {
-   padding-top: 12px;
+    padding-top: 12px;
     width: 100vw;
     height: 100vw;
 
@@ -14,7 +14,8 @@
 
 .hero-header__wrap {
     display: flex;
-    gap: 310px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -30,20 +31,22 @@
 
 .navigation__list {
     display: none;
-    @include tablet {
+
+    @include desktop {
         display: flex;
         align-items: center;
         margin-left: auto;
-        gap: 50px;
+        gap: 28px;
     }
 }
 
 .navigation__link {
-    position: relative;
     color: var(--secondary-text-color);
-    
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20/16);
     transition: color 250ms var(--timeng-function);
-
     &:hover,
     &:focus {
         color: var(--accent-color);
@@ -53,8 +56,28 @@
 .current {
     display: none;
 
-    @include tablet {
+    @include desktop {
         display: block;
         color: var(--accent-color);
+    }
+}
+
+.hero-header__btn {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+
+    .hero-header__title {
+        display: block;
+        width: 367px;
+        font-family: 'Seymour One';
+        font-weight: 400;
+        font-size: 38px;
+        line-height: calc(48/38);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--secondary-text-color);
     }
 }

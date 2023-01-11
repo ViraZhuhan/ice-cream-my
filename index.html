@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./sass/main.css">
     <title>Home</title>
 </head>
 <body>
@@ -26,8 +26,33 @@
             <li class="navigation__link link"> <a href="#">Contact</a></li>
         </ul>
     </div>
+    <button class="menu-toggle menu-open">
+        <svg class="menu-open__icon" widht="32" height="32">
+            <use href="./img/icons.svg#icon-mob-menu"></use>
+        </svg>
+    </button>
+    <button class="btn hero-header__btn">Buy now</button>
 </div>
-  <button>Buy now</button>
+    
+
+
+    <div class="mob-menu" id="mobile-menu">
+        <nav class="mob-navigation">
+            <ul class="mob-navigation__list list">
+                <li><a class="mob-navigation__link link mob-current" href="./index.html">Home</a></li>
+                <li><a class="mob-navigation__link link" href="#">How it’s made?</a></li>
+                <li><a class="mob-navigation__link link" href="#">Our products</a></li>
+                <li><a class="mob-navigation__link link" href="#">Contact</a></li>
+            </ul>          
+        </nav>
+        <button class="btn mob__btn">Buy now</button>
+        <button class="menu-toggle menu-close">
+            <svg class="menu-close__icon" widht="19" height="19">
+                <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+  
         <h1 class="hero-header__title title">ice cream made with passion</h1>
         <p>16 cafes</p>
         <p>23 food trucks</p>
@@ -41,27 +66,66 @@
 <!----------------Products---------------->
     <section class="products">
         <div class="container">
-<p>100% natural</p>
-<p>products</p>
-<ul>
-    <li>
-        <img>
-  <h2>ice cream</h2>
-  <p>Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer
-  </p>
-    </li>
-    <li>
-        <img>
-        <h2>ice coffee</h2>
-        <p>Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
+<p class="products__text">100% natural</p>
+<h2 class="products__title title"><strong>products</strong></h2>
+
+<ul class="card list">
+    <div class="wrap-item">
+    <li class="card__item">
+        <!-- <picture>
+            <source srcset="./img/ice-cream_mob.jpg 1x, ./img/ice-cream_mob-2x.jpg 2x, ./img/ice-cream_mob-3x.jpg 3x"
+            media="(min-width:1200px)">
+            <source srcset="./img/ice-cream_tab.jpg 1x, ./img/ice-cream_tab-2x.jpg 2x, ./img/ice-cream_tab-3x.jpg 3x"
+            media="(min-width:768px)">
+            <source srcset="./img/ice-cream_mob.jpg 1x, ./img/ice-cream_mob-2x.jpg 2x, ./img/ice-cream_mob-3x.jpg 3x"
+            media="(min-width:480px)">            
+            <img 
+            srcset="./images/foto_1.jpg 1x, ./images/foto_1-2x.jpg 2x"
+            src="./img/ice-cream_mob.jpg" alt="photo ice-cream" width="200" height="211">    
+        </picture> -->
+        <h3 class="card__name">ice cream</h3>
+        <p class="card__text">Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer
+
         </p>
+    </div>
+        </ul>
 
     </li>
-    <li>
-        <img>
-  <h2>milkshakes</h2>
-  <p>Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
-  </p>
+    <li class="card__item">
+        <picture>
+            <source srcset="./images/foto_2.jpg 1x, ./images/foto_2-2x.jpg 2x"
+            media="(min-width:1200px)">
+            <source srcset="./img/ice-coffee_tab.jpg 1x, ./img/ice-coffee_tab-2x.jpg 2x, ./img/ice-coffee_tab-3x.jpg 3x"
+            media="(min-width:768px)">
+            <source srcset="./img/ice-coffee_mob.jpg 1x, ./img/ice-coffee_mob-2x.jpg 2x, ./img/ice-coffee_mob-3x.jpg 3x"
+            media="(min-width:480px)">            
+            <img 
+            srcset="./images/foto_2.jpg 1x, ./images/foto_2-2x.jpg 2x"
+            src="./img/ice-coffee_mob.jpg" alt="photo ice-coffee" width="200" height="211">    
+        </picture>
+        <h3 class="card__name">ice coffee</h3>
+        <p class="card__text">Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
+
+        </p>
+        
+    </li>
+    <li class="card__item">
+        <picture>
+            <source srcset="./images/foto_3.jpg 1x, ./images/foto_3-2x.jpg 2x"
+            media="(min-width:1200px)">
+            <source srcset="./images/foto_3_tab.jpg 1x, ./images/foto_3_tab-2x.jpg 2x"
+            media="(min-width:768px)">
+            <source srcset="./img/milkshakes_mob.jpg 1x, ./img/milkshakes_mob-2x.jpg 2x, ./img/milkshakes_mob-3x.jpg 3x"
+            media="(min-width:480px)">            
+            <img 
+            srcset="./images/foto_3.jpg 1x, ./images/foto_3-2x.jpg 2x"
+            src="./images/foto_3.jpg" alt="photo milkshakes" width="200" height="211">    
+        </picture>             
+        <h3 class="card__name">milkshakes</h3>
+        <p class="card__text">Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
+
+        </p>
+        
     </li>
 </ul>
 
@@ -193,6 +257,13 @@
     </p>
     </div>
 </footer>
-
+<script src="./js/modal.js"></script>
+<script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>

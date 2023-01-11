@@ -1,0 +1,127 @@
+.menu-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+@include desktop {
+    display: none;
+}
+}
+
+.menu-open__icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 32px;
+    height: 32px;
+    fill: var(--primary-white-color);
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    padding: 48px 15px 40px 48px;
+
+    width: 100vw;
+    height: 100vh;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+        0px 2px 4px rgba(0, 0, 0, 0.08),
+        0px 1px 3px rgba(0, 0, 0, 0.16);
+    background-color: var(--primary-white-color);
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.mob-menu.is-open {
+    transform: translateX(0);
+}
+
+.mob-navigation__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mob-navigation__link {
+   
+    transition: color 250ms var(--timeng-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.mob-current {
+    color: var(--accent-color);
+}
+
+.mob-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.mob-contacts__tel {
+    
+    color: var(--accent-color);
+
+    @include mobile {
+      
+    }
+}
+
+.menu-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+
+    transform: translate(-50%, 50%);
+    transition: fill 250ms var(--timeng-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.menu-close__icon {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+
+    width: 19px;
+    height: 19px;
+
+    transform: translate(50%, -50%);
+}
